@@ -5,6 +5,7 @@ class Price extends React.Component {
     super();
 
     this.state = {
+      isLoading: true,
       dolar: "",
       eur: ""
     };
@@ -16,8 +17,13 @@ class Price extends React.Component {
 
     return (
       <div className="price">
-        <h4 className="dolar">$ {dolar} Bs. F</h4>
-        <h4 className="euro">€ {eur} Bs. F</h4>
+      
+      { this.state.isLoading ? <p className="loader">Loading...</p> :  
+        <div>
+          <h4 className="dolar">$ {dolar} Bs. F</h4>
+          <h4 className="euro">€ {eur} Bs. F</h4>
+        </div>
+        }   
       </div>
     );
   }
@@ -32,8 +38,9 @@ class Price extends React.Component {
       .then(val => {
         let dolar = val["USD"].dolartoday;
         let eur = val["EUR"].dolartoday;
+        let isLoading = false
 
-        this.setState({ dolar, eur });
+        this.setState({ dolar, eur, isLoading });
       });
   }
 }
