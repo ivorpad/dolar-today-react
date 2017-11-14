@@ -11,10 +11,13 @@ class Price extends React.Component {
   }
 
   render() {
+
+    let { dolar, eur } = this.state;
+
     return (
       <div className="price">
-        <h4 className="dolar">$ {this.state.dolar} Bs. F</h4>
-        <h4 className="euro">€ {this.state.eur} Bs. F</h4>
+        <h4 className="dolar">$ {dolar} Bs. F</h4>
+        <h4 className="euro">€ {eur} Bs. F</h4>
       </div>
     );
   }

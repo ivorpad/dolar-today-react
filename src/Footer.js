@@ -11,9 +11,12 @@ class Footer extends React.Component {
   }
 
   render() {
+
+    let { trm, vef } = this.state;
+
     return (
       <div className="footer">
-        TRM ${this.state.trm} / 1 VEF = ${this.state.vef}
+        TRM ${trm} / 1 VEF = ${vef}
       </div>
     );
   }
