@@ -20,8 +20,8 @@ class Price extends React.Component {
       
       { this.state.isLoading ? <p className="loader">Loading...</p> :  
         <div>
-          <h4 className="dolar">$ {dolar} Bs. F</h4>
-          <h4 className="euro">€ {eur} Bs. F</h4>
+          <h4 className="dolar">$ {dolar + "   Bs.F"} </h4>
+          <h4 className="euro">€ {eur + "   Bs.F"}</h4>
         </div>
         }   
       </div>

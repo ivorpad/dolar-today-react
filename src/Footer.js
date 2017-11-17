@@ -16,7 +16,7 @@ class Footer extends React.Component {
 
     return (
       <div className="footer">
-        TRM ${trm} / 1 VEF = ${vef}
+        ${"TRM  " + trm + " / 1 VEF = " + vef}
       </div>
     );
   }
