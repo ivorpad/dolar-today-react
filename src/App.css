@@ -9,6 +9,10 @@ body {
   flex-direction: column;
 }
 
+.loader {
+  text-align: center;
+}
+
 .download {
     align-self: center;
     background: #229641;
